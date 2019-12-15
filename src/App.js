@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import Todos from './Todos';
+import Todos from './Todos'
+import AddForm from './AddForm'
 
 class App extends Component {
   state = {
     todos: [
-      {id: 1, content: 'buy some mill'},
+      {id: 1, content: 'buy some milk'},
       {id: 2, content: 'play mario kart'}
     ]
   }
@@ -21,6 +22,7 @@ class App extends Component {
     <div className="todo-app container">
       <h1 className="center blue-text"> Todo's</h1>
       <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
+      <AddForm />
     </div>
   );
  }
